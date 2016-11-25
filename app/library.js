@@ -38,11 +38,11 @@ fizzBuzz: function(number){
           var geo_difference = arrays[1]/arrays[0];}
 
           if (arrays[i]-arrays[i-1] === arit_difference){
-            arrays[i]++;
+          
             return "Arithmetic";
           }
           else if(arrays[i]/arrays[i-1] === geo_difference ){
-            arrays[i]++;
+            
             return "Geometric";
           }
 
