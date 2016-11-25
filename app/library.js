@@ -10,6 +10,7 @@ if (min === max){
 return [min, max ] ;
 },
 
+
 fizzBuzz: function(number){
   if((number%3===0) && (number%5===0)){
     return "FizzBuzz";
@@ -26,26 +27,29 @@ fizzBuzz: function(number){
   }
   },
 
-aritGeo: function(array_of_numbers){
- common_diff = array_of_numbers[1] - array_of_numbers[0]
- for(var count = 2; count< array_of_numbers.length;count++){
-   if(array_of_numbers[count] !== (array_of_numbers[0] + (count*common_diff))){
-     return false;
-   }
- }
- return Arithmetic;
-},
-  
-aritGeo: function(array_of_numbers){
- common_diff = array_of_numbers[1] / array_of_numbers[0]
- for(var count = 2; count< array_of_numbers.length;count++){
-   if(array_of_numbers[count] !== array_of_numbers[0]*(Math.pow(common_diff, (count)))){
-     return false;
-   }
- }
- return Geometric;
-}
- 
+
+ aritGeo: function (arrays){
+  if (arrays.length === 0){
+    return 0;
+  }else {
+         
+         for (var i in arrays){
+           var arit_difference = arrays[1] - arrays[0];
+          var geo_difference = arrays[1]/arrays[0];}
+
+          if (arrays[i]-arrays[i-1] === arit_difference){
+            arrays[i]++;
+            return "Arithmetic";
+          }
+          else if(arrays[i]/arrays[i-1] === geo_difference ){
+            arrays[i]++;
+            return "Geometric";
+          }
+
+          }
+         
+return -1;
+  }
 
 
 } 
